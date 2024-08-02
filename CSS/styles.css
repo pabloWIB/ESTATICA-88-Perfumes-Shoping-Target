@@ -1,0 +1,850 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.archivo {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.libre-caslon-text-regular {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: #EFEFE2;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url("../IMG/BACKGROUNDS/Background Mountains.avif") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+header section, header aside {
+  flex: 1;
+  height: 100%;
+}
+header section {
+  background: #EFEFE2;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+header section > :nth-child(1) {
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+header section > :nth-child(1) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header section > :nth-child(1) > :nth-child(1) > :nth-child(1) h3, header section > :nth-child(1) > :nth-child(1) > :nth-child(1) a, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) h3, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) a {
+  all: unset;
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: default;
+}
+header section > :nth-child(1) > :nth-child(1) > :nth-child(1) a, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) a {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15rem;
+}
+header section > :nth-child(1) > :nth-child(1) > :nth-child(1) a:hover, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) a:hover {
+  color: #3E432E;
+}
+header section > :nth-child(1) > :nth-child(1) > :nth-child(1) h3::-moz-selection, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) h3::-moz-selection {
+  background: none;
+}
+header section > :nth-child(1) > :nth-child(1) > :nth-child(1) h3::selection, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) h3::selection {
+  background: none;
+}
+header section > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  align-items: center;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 0px 6px;
+}
+header section > :nth-child(1) > :nth-child(2), header section > :nth-child(1) > :nth-child(3), header section > :nth-child(1) > :nth-child(4) {
+  width: 100%;
+  text-align: center;
+}
+header section > :nth-child(1) > :nth-child(2) h2, header section > :nth-child(1) > :nth-child(3) h2, header section > :nth-child(1) > :nth-child(4) h2 {
+  all: unset;
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+header section > :nth-child(1) > :nth-child(3) h1, header section > :nth-child(1) > :nth-child(3) p {
+  all: unset;
+  font-size: 50px;
+  font-family: "Libre Caslon Text", serif;
+}
+header section > :nth-child(1) > :nth-child(3) p {
+  font-style: italic;
+}
+header section > :nth-child(1) > :nth-child(4) {
+  margin: 0 auto;
+  width: 80%;
+}
+header section > :nth-child(1) > :nth-child(4) p {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+}
+header section > :nth-child(1) > :nth-child(4) p a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+}
+header section > :nth-child(1) > :nth-child(5) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.45rem;
+}
+header section > :nth-child(1) > :nth-child(5) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+header section > :nth-child(1) > :nth-child(5) > :nth-child(1) > :nth-child(1) h4 {
+  all: unset;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Archivo", sans-serif;
+}
+header section > :nth-child(1) > :nth-child(5) > :nth-child(2) {
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+header aside {
+  overflow: hidden;
+  position: relative;
+}
+header aside > :nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../IMG/BACKGROUNDS/Background Mountains.avif") center center no-repeat;
+  background-size: cover;
+  transform: scale(1.5);
+  transform-origin: center;
+  z-index: 8;
+}
+header aside > :nth-child(1):hover {
+  transform: scale(1.25);
+}
+header aside > :nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+header aside > :nth-child(2) > :nth-child(1) {
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  height: 15px;
+  width: 15px;
+  background: white;
+  border-radius: 50%;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  color: white;
+  gap: 0.5rem;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a > :nth-child(1) {
+  height: 2px;
+  width: 0px;
+  background: white;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a p {
+  all: unset;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Archivo", sans-serif;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  text-underline-offset: 0.25rem;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a:hover > :nth-child(1) {
+  width: 15px;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  width: 100%;
+  text-align: center;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(2) h2 {
+  all: unset;
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.25rem;
+  align-items: flex-end;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(1) {
+  width: 50%;
+  height: 5px;
+  background: white;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) {
+  display: flex;
+  width: 100%;
+  background: white;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  align-items: center;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  width: min(90px, 100%);
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) img {
+  width: 100%;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  text-align: center;
+  width: 80%;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) p {
+  font-size: 16px;
+  color: black;
+  font-family: "Archivo", sans-serif;
+  line-height: 1.3;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) p span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) {
+  all: unset;
+  font-family: "Archivo", sans-serif;
+  cursor: pointer;
+  background: #3E432E;
+  padding: 0px 2.5px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3):hover {
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(1) {
+  width: min(25px, 90%);
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(1) img {
+  width: 100%;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) {
+  color: white;
+  font-weight: 600;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.45rem;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(1) > :nth-child(1) h4 {
+  all: unset;
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  font-family: "Archivo", sans-serif;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(1) > :nth-child(2) {
+  flex: 1;
+  height: 2px;
+  background: white;
+}
+header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(2) {
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  header {
+    width: 100%;
+    flex-flow: column nowrap;
+    align-content: center;
+  }
+  header section {
+    background: #EFEFE2;
+    display: flex;
+    height: 100vh;
+    place-content: center;
+    align-items: center;
+  }
+  header section > :nth-child(1) {
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+  header section > :nth-child(1) > :nth-child(1) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header section > :nth-child(1) > :nth-child(1) > :nth-child(1) h3, header section > :nth-child(1) > :nth-child(1) > :nth-child(1) a, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) h3, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) a {
+    all: unset;
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: default;
+  }
+  header section > :nth-child(1) > :nth-child(1) > :nth-child(1) a, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) a {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 0.15rem;
+  }
+  header section > :nth-child(1) > :nth-child(1) > :nth-child(1) a:hover, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) a:hover {
+    color: #3E432E;
+  }
+  header section > :nth-child(1) > :nth-child(1) > :nth-child(1) h3::-moz-selection, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) h3::-moz-selection {
+    background: none;
+  }
+  header section > :nth-child(1) > :nth-child(1) > :nth-child(1) h3::selection, header section > :nth-child(1) > :nth-child(1) > :nth-child(2) h3::selection {
+    background: none;
+  }
+  header section > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+    align-items: center;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 0px 6px;
+  }
+  header section > :nth-child(1) > :nth-child(2), header section > :nth-child(1) > :nth-child(3), header section > :nth-child(1) > :nth-child(4) {
+    width: 100%;
+    text-align: center;
+  }
+  header section > :nth-child(1) > :nth-child(2) h2, header section > :nth-child(1) > :nth-child(3) h2, header section > :nth-child(1) > :nth-child(4) h2 {
+    all: unset;
+    font-family: "Archivo", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  header section > :nth-child(1) > :nth-child(3) h1, header section > :nth-child(1) > :nth-child(3) p {
+    all: unset;
+    font-size: 50px;
+    font-family: "Libre Caslon Text", serif;
+  }
+  header section > :nth-child(1) > :nth-child(3) p {
+    font-style: italic;
+  }
+  header section > :nth-child(1) > :nth-child(4) {
+    margin: 0 auto;
+    width: 80%;
+  }
+  header section > :nth-child(1) > :nth-child(4) p {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+  }
+  header section > :nth-child(1) > :nth-child(4) p a {
+    all: unset;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  header section > :nth-child(1) > :nth-child(5) {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.45rem;
+  }
+  header section > :nth-child(1) > :nth-child(5) > :nth-child(1) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  header section > :nth-child(1) > :nth-child(5) > :nth-child(1) > :nth-child(1) h4 {
+    all: unset;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Archivo", sans-serif;
+  }
+  header section > :nth-child(1) > :nth-child(5) > :nth-child(2) {
+    width: 100%;
+    height: 2px;
+    background: black;
+  }
+  header aside {
+    overflow: hidden;
+    position: relative;
+  }
+  header aside > :nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../IMG/BACKGROUNDS/Background Mountains.avif") center center no-repeat;
+    background-size: cover;
+    transform: scale(1.5);
+    transform-origin: center;
+    z-index: 8;
+  }
+  header aside > :nth-child(1):hover {
+    transform: scale(1.25);
+  }
+  header aside > :nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    place-content: center;
+    align-items: center;
+  }
+  header aside > :nth-child(2) > :nth-child(1) {
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 50%;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    color: white;
+    gap: 0.5rem;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a > :nth-child(1) {
+    height: 2px;
+    width: 0px;
+    background: white;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a p {
+    all: unset;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Archivo", sans-serif;
+    -webkit-text-decoration: underline white;
+            text-decoration: underline white;
+    text-underline-offset: 0.25rem;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(1) > :nth-child(2) a:hover > :nth-child(1) {
+    width: 15px;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+    width: 100%;
+    text-align: center;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(2) h2 {
+    all: unset;
+    font-family: "Archivo", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.25rem;
+    align-items: flex-end;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(1) {
+    width: 50%;
+    height: 5px;
+    background: white;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) {
+    display: flex;
+    width: 100%;
+    background: white;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+    width: min(90px, 100%);
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(1) img {
+    width: 100%;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+    text-align: center;
+    width: 80%;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) p {
+    font-size: 16px;
+    color: black;
+    font-family: "Archivo", sans-serif;
+    line-height: 1.3;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(2) p span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) {
+    all: unset;
+    font-family: "Archivo", sans-serif;
+    cursor: pointer;
+    background: #3E432E;
+    padding: 0px 2.5px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3):hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(1) {
+    width: min(25px, 90%);
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(1) img {
+    width: 100%;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) > :nth-child(1) > :nth-child(3) > :nth-child(2) {
+    color: white;
+    font-weight: 600;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.45rem;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(1) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(1) > :nth-child(1) h4 {
+    all: unset;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    font-family: "Archivo", sans-serif;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(1) > :nth-child(2) {
+    flex: 1;
+    height: 2px;
+    background: white;
+  }
+  header aside > :nth-child(2) > :nth-child(1) > :nth-child(4) > :nth-child(2) {
+    width: 100%;
+    height: 2px;
+    background: white;
+  }
+}
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  place-content: center;
+  padding: 50px 0px;
+  background: #3E432E;
+  font-family: "Archivo", sans-serif;
+}
+footer > :nth-child(1) {
+  width: 85%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+footer > :nth-child(1) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5rem;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 100%;
+  gap: 3.85rem;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  width: 100%;
+  max-width: 10rem;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(1) img {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(2) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.95rem;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(2) svg {
+  fill: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(2) svg:hover {
+  transform: scale(1.05);
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2), footer > :nth-child(1) > :nth-child(1) > :nth-child(3) {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2) a, footer > :nth-child(1) > :nth-child(1) > :nth-child(3) a {
+  all: unset;
+  transition: 0.3s;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2) a > :nth-child(1), footer > :nth-child(1) > :nth-child(1) > :nth-child(3) a > :nth-child(1) {
+  width: min(25px, 100%);
+  cursor: pointer;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2) a > :nth-child(1) img, footer > :nth-child(1) > :nth-child(1) > :nth-child(3) a > :nth-child(1) img {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2) a p, footer > :nth-child(1) > :nth-child(1) > :nth-child(3) a p {
+  cursor: pointer;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2) a p:hover, footer > :nth-child(1) > :nth-child(1) > :nth-child(3) a p:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+footer > :nth-child(1) > :nth-child(2) {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) a {
+  all: unset;
+  cursor: pointer;
+  background: rgb(27, 145, 48);
+  padding: 0px 5px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) a:hover {
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) a > :nth-child(1) {
+  width: min(25px, 90%);
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) a > :nth-child(1) img {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) a > :nth-child(2) {
+  color: white;
+  font-weight: 600;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p {
+  all: unset;
+  font-size: 15.5px;
+  color: white;
+  cursor: default;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p::-moz-selection {
+  background: none;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p::selection {
+  background: none;
+}
+
+@media (max-width: 960px) {
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    place-content: center;
+    padding: 50px 0px;
+  }
+  footer > :nth-child(1) {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
+  }
+  footer > :nth-child(1) > :nth-child(1) {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  footer > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 100%;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  footer > :nth-child(1) > :nth-child(1) > :nth-child(1) > :nth-child(2) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  footer > :nth-child(1) > :nth-child(2) {
+    gap: 2rem;
+    align-items: center;
+  }
+}
+.whatsappScreenPositionInternal {
+  position: fixed;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  right: 0;
+  bottom: 0%;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+  gap: 0.5rem;
+  z-index: 2000;
+}
+.whatsappScreenPositionInternal .whatsappCallAction {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.whatsappScreenPositionInternal .whatsappCallAction > :nth-child(1) {
+  width: min(50px, 100%);
+}
+.whatsappScreenPositionInternal .whatsappCallAction > :nth-child(1):hover {
+  transform: scale(1.05);
+}
+.whatsappScreenPositionInternal .whatsappCallAction > :nth-child(1) img {
+  width: 100%;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

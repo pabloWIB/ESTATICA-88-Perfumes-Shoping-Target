@@ -7,3 +7,7 @@ img::selection, span::selection, div::selection, button::selection, br::selectio
 *{
   transition: .3s;
 }
+/* 
+html{
+  scroll-behavior: smooth;
+} */
