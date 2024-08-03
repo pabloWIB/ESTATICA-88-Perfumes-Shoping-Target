@@ -1,4 +1,6 @@
-<h2 align="center">Página: <a href=""></a><span>Aún no disponible</span></h2>
+![alt text](image.png)
+<h2 align="center">Diseño Figma: <a href="https://www.figma.com/design/TpVtVFiHWxHnGduRkctxhR/Perfumes-Shoping-Target?node-id=0-1&t=e9HYr83vMGgPcEgK-0">Maquetado en Figma</a></h2>
+<h2 align="center"><a href="https://pablowib.github.io/ESTATICA-88-Perfumes-Shoping-Target/"></a>Perfumestarget.com</h2>
 
 <h2 >Tecnologías usadas👨🏻‍💻</h2>
 <br>

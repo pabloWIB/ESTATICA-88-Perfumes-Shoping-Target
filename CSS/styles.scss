@@ -23,9 +23,37 @@
 
 body{
     background: #EFEFE2;
+    .BackgroundColor{
+        background: #EFEFE2;
+    }
 }
 
 // BODY ---
+
+// paginaDeInicio
+
+.paginaDeInicio{
+    background: #3E432E;
+    width: 100%;
+    >:nth-child(1){
+        width: min(1250px, 85%);
+        margin: 0 auto;
+        padding: 1rem 0rem;
+        a{
+            all: unset;
+            font-weight: 500;
+            font-family: "Archivo", sans-serif;
+            font-size: 19px;
+            cursor: pointer;
+            color: white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// paginaDeInicio ---
 
 // HEADER
 
@@ -135,7 +163,7 @@ header{
                     }
                 }
                 >:nth-child(2){
-                    width: 100%;
+                    width: 0%;
                     height: 2px;
                     background: black;
                 }
@@ -151,7 +179,7 @@ header{
             left: 0;
             height: 100%;
             width: 100%;
-            background: url("../IMG/BACKGROUNDS/Background Mountains.avif") center center no-repeat;
+            background: url("../IMG/BACKGROUNDS/Background Mountains.jpg") center center no-repeat;
             background-size: cover; 
             transform: scale(1.5); 
             transform-origin: center; 
@@ -239,7 +267,7 @@ header{
                     gap: .25rem;
                     align-items: flex-end;
                     >:nth-child(1){
-                        width: 50%;
+                        width: 0%;
                         height: 5px;
                         background: white;
                     }
@@ -250,7 +278,7 @@ header{
                         display: flex;
                         place-content: center;
                         align-items: center;
-                        padding: .75rem;
+                        padding: .75rem 0rem;
                         >:nth-child(1){
                             width: 100%;
                             height: 100%;
@@ -330,13 +358,13 @@ header{
                             }
                         }
                         >:nth-child(2){
-                            flex: 1;
+                            flex: 0;
                             height: 2px;
                             background: white;
                         }
                     }
                     >:nth-child(2){
-                        width: 100%;
+                        width: 0%;
                         height: 2px;
                         background: white;
                     }
@@ -345,6 +373,144 @@ header{
         }
     }
 }
+
+// SECTION ANIMATIONS 
+
+section{
+    >:nth-child(1){
+        >:nth-child(1), >:nth-child(2), >:nth-child(3), >:nth-child(4), >:nth-child(5){
+            transform: translateY(100%);
+            opacity: 00%;
+        }
+        >:nth-child(1){
+            transition-delay: .3s;
+            transition: 1.75s;
+        }
+        >:nth-child(2){
+            transition-delay: .6s;
+            transition: 1.75s;
+        }
+        >:nth-child(3){
+            transition-delay: .9s;
+            transition: 1.75s;
+        }
+        >:nth-child(4){
+            transition-delay: 1.2s;
+            transition: 1.75s;
+        }
+        >:nth-child(5){
+            transition-delay: 1.5s;
+            transition: 1.75s;
+            >:nth-child(2){
+                transition: 1s;
+            }
+        }
+    }
+}
+
+.sectionAfter{
+    >:nth-child(1){
+        >:nth-child(1), >:nth-child(2), >:nth-child(3), >:nth-child(4), >:nth-child(5){
+            transform: translateY(0%);
+            opacity: 100%;
+        }
+        >:nth-child(5){
+            >:nth-child(2){
+                width: 100%;
+            }
+        }
+    }
+}
+
+// SECTION ANIMATIONS ---
+
+// ASIDE ANIMATIONS
+
+aside{
+    >:nth-child(1){
+        transform: scale(1.5); 
+    }
+    >:nth-child(2){
+        >:nth-child(1){
+            >:nth-child(1), >:nth-child(2), >:nth-child(3), >:nth-child(4){
+                transform: translateY(100%);
+                opacity: 0%;
+            }
+            >:nth-child(1){
+                transition-delay: 1.8s;
+                transition: 1.75s;
+            }
+            >:nth-child(2){
+                transition-delay: 2.1s;
+                transition: 1.75s;
+            }
+            >:nth-child(3){
+                transition-delay: 2.4s;
+                transition: 1.75s;
+                >:nth-child(1){
+                    width: 100%;
+                    transition: 1.75s;
+                }
+            }
+            >:nth-child(4){         
+                transform: translateY(200%);       
+                >:nth-child(1){
+                    transition-delay: 2.7s;
+                    transition: 1.75s;
+                    >:nth-child(2){
+                        flex: 0;
+                        transition: 1.75s;
+                        transition: 2.75s;
+                    }
+                }
+                >:nth-child(2){
+                    transition-delay: 2.7s;
+                    width: 0%;
+                    transition: 1.75s;
+                }
+            }
+        }
+    }
+}
+
+.asideAfter{
+    >:nth-child(1){
+        transition-delay: .3s;
+        transition: 1.75s;
+        transform: scale(1); 
+    }
+    >:nth-child(2){
+        >:nth-child(1){
+            >:nth-child(1), >:nth-child(2), >:nth-child(3), >:nth-child(4){
+                transform: translateY(0%);
+                opacity: 100%;
+            }
+            >:nth-child(3){
+                transition-delay: 2.4s;
+                transition: 1.75s;
+                >:nth-child(1){
+                    width: 100%;
+                }
+            }
+            >:nth-child(4){
+                transition-delay: 2.7s;
+                transition: 1.75s;
+                >:nth-child(1){
+                    >:nth-child(2){
+                        flex: 1;
+                        transition: 1s;
+                    }
+                }
+                >:nth-child(2){
+                    width: 100%;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}
+
+// ASIDE ANIMATIONS ---
 
 // HEADER RESPONSIVE
 
@@ -386,291 +552,6 @@ header{
 // HEADER RESPONSIVE
 
 // HEADER ---
-
-// FOOTER
-
-footer{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    place-content: center;
-    padding: 50px 0px;
-    background: #3E432E;
-    font-family: "Archivo", sans-serif;
-    >:nth-child(1){
-        width: 85%;
-        max-width: 1440px;
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
-        >:nth-child(1){
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 6.5rem;
-            >:nth-child(1){
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: space-between;
-                height: 100%;
-                gap: 3.85rem;
-                >:nth-child(1){
-                    width: 100%;
-                    max-width: 10rem;
-                    img{
-                        width: 100%;
-                    }
-                }
-                >:nth-child(2){
-                    display: flex;
-                    flex-flow: row wrap;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: .95rem;
-                    svg{
-                        fill: white;
-                        cursor: pointer;
-                        transition: .1s;
-                        &:hover{
-                            transform: scale(1.05);
-                        }
-                    }
-                }
-            }
-            >:nth-child(2){
-                display: flex;
-                flex-flow: column wrap;
-                gap: .5rem;
-                a{
-                    all: unset;
-                    transition: .3s;
-                    font-size: 15.5px;
-                    font-weight: 500;
-                    color: white;
-                    display: flex;
-                    flex-flow: row;
-                    align-items: center;
-                    gap: .5rem;
-                    >:nth-child(1){
-                        width: min(25px, 100%);
-                        cursor: pointer;
-                        &:hover{
-                            transform: scale(1.05);
-                        }
-                        img{
-                            width: 100%;
-                        }
-                    }
-                    p{
-                        cursor: pointer;
-                        &:hover{
-                            text-decoration: underline;
-                            text-underline-offset: .25rem;
-                        }
-                    }
-                }
-            }
-            .specialFixBootstrap{
-                a{
-                    >:nth-child(1){
-                        transform: translateY(-25%);
-                        &:hover{
-                            transform: translateY(-25%) scale(1.05);
-                        }
-                    }
-                }
-            }
-        }
-        >:nth-child(2){
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-between;
-            gap: 2rem;
-            >:nth-child(1){
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: flex-end;
-                a{
-                    all: unset;
-                    cursor: pointer;
-                    background: rgb(255, 255, 255);
-                    padding: .5rem .65rem;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: center;
-                    gap: .45rem;
-                    border-radius: 15px;
-                    box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: .1);
-                    transition: .5s;
-                    &:hover{
-                        transform: scale(1.05); /* Slightly scale up */
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-                        transition: .5s;
-                    }
-                    >:nth-child(1){
-                        width: min(25px, 90%);
-                        svg{
-                            width: 100%;
-                            fill: #3E432E;
-                        }
-                    }
-                    >:nth-child(2){
-                        p{
-                            all: unset;
-                            font-weight: 500;
-                            font-size: 16px;
-                            color: #3E432E;
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-            >:nth-child(2){
-                p{
-                    all: unset;
-                    font-size: 15.5px;
-                    color: white;
-                    cursor: default;
-                }
-                p::selection{
-                    background: none;
-                }
-            }
-        }
-    }
-}
-
-// FOOTER---
-
-// FOOTER MEDIAS(1050px) TABLET / PHONE ---
-
-@media(max-width:1050px){
-    footer{
-        width: 100%;
-        padding: 20px 0px;
-        >:nth-child(1){
-            width: 95%;
-            flex-flow: column wrap;
-            align-items: center;
-            gap: 1rem;
-            >:nth-child(1){
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                justify-content: center;
-                gap: 2.5rem;
-                >:nth-child(1){
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    gap: 1.5rem;
-                    >:nth-child(1){
-                        max-width: 7.5rem;
-                    }
-                    >:nth-child(2){
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-                        justify-content: space-between;
-                        gap: .95rem;
-                    }
-                }
-                >:nth-child(2){
-                    gap: 0rem;
-                }
-            }
-            >:nth-child(2){
-                gap: 1.5rem;
-                align-items: center;
-                >:nth-child(1){
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: flex-end;
-                }
-            }
-        }
-    }
-}
-
-// FOOTER MEDIAS(1050px) TABLET / PHONE --- ---
-
-// WhatsApp screen 
-     
-.whatsappScreenPositionInternal{
-    position: fixed;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    right: 0;
-    bottom: 0%;
-    display: flex;
-    justify-content: flex-end;
-    flex-flow: column wrap;
-    gap: .5rem;
-    z-index: 2000;
-    .whatsappCallAction{
-        width: 95%;
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        >:nth-child(1){
-            width: min(50px, 100%);
-            &:hover{
-                transform: scale(1.05);
-            }
-            img{
-                width: 100%;
-                cursor: pointer;
-            }
-        }
-    }
-}
-
-// WhatsApp screen ---
-
-body{
-    background: #EFEFE2;
-    .BackgroundColor{
-        background: #EFEFE2;
-    }
-}
-
-.tabs {
-    display: flex;    
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0rem;
-    .tab-button {
-        all: unset;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 20px;
-        color: #000000;
-        &:hover{
-            text-decoration: underline .12rem solid black;
-        text-underline-offset: .15rem;
-        }
-    }
-    .tab-button.active {
-        text-decoration: underline .12rem solid black;
-        text-underline-offset: .15rem;
-    }
-}
-
-.tab-pane {
-    display: none;
-}
-
-.tab-pane.active {
-    display: block;
-}
-
 
 // Main
 
@@ -921,8 +802,6 @@ main{
     }
 }
 
-// Main ---
-
 .carrusel2{
     width: min(1250px, 85%);
     margin: 0 auto;
@@ -1077,3 +956,379 @@ main{
     }
 }
 
+@media(max-width: 990px){
+    .carrusel2{
+        .buttonsSelection{
+            width: min(1250px, 90%);
+            >:nth-child(1), >:nth-child(2){
+                all: unset;
+                cursor: pointer;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 7.5px;
+                p{
+                    all: unset;
+                    color: black;
+                    font-size: 15px;
+                }
+                .imagePrevNext{
+                    width: min(40px, 100%);
+                }
+            }
+        }
+        .carousel{
+            width: min(1250px, 95%);
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            place-content: center;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            .carousel-item{
+                .container{
+                    display: flex;
+                    flex-flow: row wrap;
+                    place-content: center;
+                    align-items: center;
+                    gap: 1.5rem;
+                    .uno{
+                        width: 85%;
+                        width: min(250px, 95%);
+                    }
+                    .dos{
+                        width: 100%;
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: space-between;
+                        gap: 1rem;
+                        >:nth-child(1){
+                            text-align: center;
+                            h3{
+                                all: unset;
+                                font-family: 'Judson', serif;
+                                font-size: 20px;
+                            }
+                        }
+                        >:nth-child(2){
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-items: center;
+                            gap: 1rem;
+                            justify-content: center;
+                            transform: translateX(0%);
+                            >div{
+                                width: min(100px, 95%);
+                            }
+                        }
+                        >:nth-child(3){
+                            display: flex;
+                            flex-flow: column wrap;
+                            gap: 5px;
+                            h2{
+                                all: unset;
+                                font-family: 'Judson', serif;
+                                font-weight: 800;
+                                font-size: 26px;
+                            }
+                            h5{
+                                font-family: 'Nunito Sans', sans-serif;
+                                font-size: 17px;
+                                font-weight: 600;
+                            }
+                        }
+                        >:nth-child(4){
+                            display: flex;
+                            flex-flow: column wrap;
+                            gap: .25rem;
+                            p{
+                                all: unset;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main ---
+
+// FOOTER
+
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    place-content: center;
+    padding: 50px 0px;
+    background: #3E432E;
+    font-family: "Archivo", sans-serif;
+    >:nth-child(1){
+        width: min(1250px, 85%);
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        >:nth-child(1){
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 6.5rem;
+            >:nth-child(1){
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+                height: 100%;
+                gap: 3.85rem;
+                >:nth-child(1){
+                    width: 100%;
+                    max-width: 10rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+                >:nth-child(2){
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: .95rem;
+                    svg{
+                        fill: white;
+                        cursor: pointer;
+                        transition: .1s;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+            >:nth-child(2){
+                display: flex;
+                flex-flow: column wrap;
+                gap: .5rem;
+                a{
+                    all: unset;
+                    transition: .3s;
+                    font-size: 15.5px;
+                    font-weight: 500;
+                    color: white;
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    gap: .5rem;
+                    >:nth-child(1){
+                        width: min(25px, 100%);
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    p{
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                            text-underline-offset: .25rem;
+                        }
+                    }
+                }
+            }
+            .specialFixBootstrap{
+                a{
+                    >:nth-child(1){
+                        transform: translateY(-25%);
+                        &:hover{
+                            transform: translateY(-25%) scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+        >:nth-child(2){
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            >:nth-child(1){
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
+                a{
+                    all: unset;
+                    cursor: pointer;
+                    background: rgb(255, 255, 255);
+                    padding: .5rem .65rem;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: .45rem;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: .1);
+                    transition: .5s;
+                    &:hover{
+                        transform: scale(1.05); /* Slightly scale up */
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+                        transition: .5s;
+                    }
+                    >:nth-child(1){
+                        width: min(25px, 90%);
+                        svg{
+                            width: 100%;
+                            fill: #3E432E;
+                        }
+                    }
+                    >:nth-child(2){
+                        p{
+                            all: unset;
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #3E432E;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            >:nth-child(2){
+                p{
+                    all: unset;
+                    font-size: 15.5px;
+                    color: white;
+                    cursor: default;
+                }
+                p::selection{
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+// FOOTER---
+
+// FOOTER MEDIAS(1050px) TABLET / PHONE ---
+
+@media(max-width:1050px){
+    footer{
+        width: 100%;
+        padding: 20px 0px;
+        >:nth-child(1){
+            width: 95%;
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 1rem;
+            >:nth-child(1){
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                gap: 2.5rem;
+                >:nth-child(1){
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: space-between;
+                    gap: 1.5rem;
+                    >:nth-child(1){
+                        max-width: 7.5rem;
+                    }
+                    >:nth-child(2){
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: .95rem;
+                    }
+                }
+                >:nth-child(2){
+                    gap: 0rem;
+                }
+            }
+            >:nth-child(2){
+                gap: 1.5rem;
+                align-items: center;
+                >:nth-child(1){
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+// FOOTER MEDIAS(1050px) TABLET / PHONE --- ---
+
+// WhatsApp screen 
+     
+.whatsappScreenPositionInternal{
+    position: fixed;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    right: 0;
+    bottom: 0%;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column wrap;
+    gap: .5rem;
+    z-index: 2000;
+    .whatsappCallAction{
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        >:nth-child(1){
+            width: min(50px, 100%);
+            &:hover{
+                transform: scale(1.05);
+            }
+            img{
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// WhatsApp screen ---
+
+.tabs {
+    display: flex;    
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0rem;
+    .tab-button {
+        all: unset;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+        &:hover{
+            text-decoration: underline .12rem solid black;
+        text-underline-offset: .15rem;
+        }
+    }
+    .tab-button.active {
+        text-decoration: underline .12rem solid black;
+        text-underline-offset: .15rem;
+    }
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
