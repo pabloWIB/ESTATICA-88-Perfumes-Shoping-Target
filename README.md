@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/32ec3cd2-1fe5-4565-a7f9-334af9ef6993)
 
-<h2 align="center">Página: <a href="https://pablowib.github.io/ESTATICA-88-Perfumes-Shoping-Target/">WONDERFULSTORIES.com  </a><</h2>
+<h2 align="center">Página: <a href="https://pablowib.github.io/ESTATICA-88-Perfumes-Shoping-Target/">WONDERFULSTORIES.com  </a></h2>
 
 <h2 >Tecnologías usadas👨🏻‍💻</h2>
 <br>
