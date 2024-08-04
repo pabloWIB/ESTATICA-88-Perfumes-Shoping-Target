@@ -41,6 +41,10 @@ body .BackgroundColor {
   text-decoration: underline;
 }
 
+.BackgroundColor {
+  background: #EFEFE2;
+}
+
 header {
   width: 100%;
   height: 100%;
@@ -531,10 +535,12 @@ main .carousel .carousel-item .container {
   place-content: center;
   align-items: center;
   gap: 1.5rem;
+  padding-bottom: 1rem;
 }
 main .carousel .carousel-item .container .uno {
   width: 50%;
   width: min(350px, 95%);
+  box-shadow: 2px 2px 2px gray;
 }
 main .carousel .carousel-item .container .uno img {
   width: 100%;
@@ -556,7 +562,6 @@ main .carousel .carousel-item .container .dos > :nth-child(2) {
   flex-flow: row wrap;
   align-items: center;
   gap: 1rem;
-  transform: translateX(-5%);
 }
 main .carousel .carousel-item .container .dos > :nth-child(2) > div {
   width: min(110px, 95%);
@@ -775,6 +780,7 @@ main .whatsAppCallActions a p {
   place-content: center;
   align-items: center;
   gap: 1.5rem;
+  padding-bottom: 1rem;
 }
 .carrusel2 .carousel .carousel-item .container .uno {
   width: 50%;
@@ -782,6 +788,7 @@ main .whatsAppCallActions a p {
 }
 .carrusel2 .carousel .carousel-item .container .uno img {
   width: 100%;
+  box-shadow: 2px 2px 2px gray;
 }
 .carrusel2 .carousel .carousel-item .container .dos {
   width: 50%;
@@ -800,7 +807,6 @@ main .whatsAppCallActions a p {
   flex-flow: row wrap;
   align-items: center;
   gap: 1rem;
-  transform: translateX(-5%);
 }
 .carrusel2 .carousel .carousel-item .container .dos > :nth-child(2) > div {
   width: min(110px, 95%);
