@@ -3,14 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.archivo{
-    font-family: "Archivo", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-}
-
 .libre-caslon-text-regular {
     font-family: "Libre Caslon Text", serif;
     font-weight: 400;
@@ -23,43 +15,17 @@
 
 body{
     background: #EFEFE2;
-    .BackgroundColor{
-        background: #EFEFE2;
-    }
 }
 
 // BODY ---
 
 // paginaDeInicio
 
-.paginaDeInicio{
-    background: #3E432E;
-    width: 100%;
-    >:nth-child(1){
-        width: min(1250px, 85%);
-        margin: 0 auto;
-        padding: 1rem 0rem;
-        a{
-            all: unset;
-            font-weight: 500;
-            font-family: "Archivo", sans-serif;
-            font-size: 19px;
-            cursor: pointer;
-            color: white;
-            &:hover{
-                text-decoration: underline;
-            }
-        }
-    }
-}
+
 
 // paginaDeInicio ---
 
 // HEADER
-
-.BackgroundColor{
-    background: #EFEFE2;
-}
 
 header{
     width: 100%;
@@ -93,19 +59,8 @@ header{
                         all: unset;
                         font-family: "Archivo", sans-serif;
                         font-weight: 500;
-                        font-size: 16px;
+                        font-size: 15px;
                         cursor: default;
-                    }
-                    a{
-                        cursor: pointer;
-                        text-decoration: underline;
-                        text-underline-offset: .15rem;
-                        &:hover{
-                            color: #3E432E;
-                        }
-                    }
-                    h3::selection{
-                        background: none;
                     }
                 }
                 >:nth-child(1){
@@ -131,20 +86,21 @@ header{
                     all: unset;
                     font-size: 50px;
                     font-family: "Libre Caslon Text", serif;
+                    font-size: 65px;
                 }
                 p{
                     font-style: italic;
                 }
+                h1{
+                }
             }
             >:nth-child(4){
                 margin: 0 auto;
-                width: 80%;
+                width: 90%;
                 p{
                     font-family: "Archivo", sans-serif;
-                    font-size: 16px;
-                    a{
-                        all: unset;
-                        cursor: pointer;
+                    font-size: 14px;
+                    span{
                         text-decoration: underline;
                     }
                 }
@@ -214,17 +170,19 @@ header{
                     flex-flow: row wrap;
                     justify-content: space-between;
                     >:nth-child(1){
-                        height: 15px;
-                        width: 15px;
-                        background: white;
+                        height: 12.5px;
+                        width: 12.5px;
+                        background: #efefe2;
                         border-radius: 50%;
                     }
                     >:nth-child(2){
                         display: flex;
                         flex-flow: column wrap;
                         align-items: flex-end;
-                        color: white;
-                        gap: .5rem;
+                        color: #efefe2;
+                        >:nth-child(1){
+                            margin-bottom: .5rem;
+                        }
                         a{
                             all: unset;
                             cursor: pointer;
@@ -234,14 +192,13 @@ header{
                             >:nth-child(1){
                                 height: 2px;
                                 width: 0px;
-                                background: white;
+                                background: #efefe2;
                             }
                             p{
                                 all: unset;
-                                font-size: 16px;
+                                font-size: 15px;
                                 font-weight: 500;
                                 font-family: "Archivo", sans-serif;
-                                text-decoration: underline white;
                                 text-underline-offset: .25rem;
                             }
                         }
@@ -260,7 +217,7 @@ header{
                         font-family: "Archivo", sans-serif;
                         font-size: 17px;
                         font-weight: 500;
-                        color: white;
+                        color: #efefe2;
                     }
                 }
                 >:nth-child(3){
@@ -273,16 +230,16 @@ header{
                     >:nth-child(1){
                         width: 0%;
                         height: 5px;
-                        background: white;
+                        background: #EFEFE2;
                     }
                     >:nth-child(2){
                         display: flex;
                         width: 100%;
-                        background: white;
+                        background: #EFEFE2;
                         display: flex;
                         place-content: center;
                         align-items: center;
-                        padding: .75rem 0rem;
+                        padding: 1.75rem 0rem;
                         >:nth-child(1){
                             width: 100%;
                             height: 100%;
@@ -290,9 +247,11 @@ header{
                             flex-flow: column wrap;
                             gap: .25rem;
                             align-items: center;
+                            border-radius: 50%;
                             >:nth-child(1){
-                                width: min(90px, 100%);
+                                width: min(110px, 100%);
                                 img{
+                                border-radius: 50%;
                                     width: 100%;
                                 }
                             }
@@ -300,42 +259,13 @@ header{
                                 text-align: center;
                                 width: 80%;
                                 p{
-                                    font-size: 16px;
+                                    font-size: 14px;
                                     color: black;
                                     font-family: "Archivo", sans-serif;
                                     line-height: 1.3;
                                     span{
-                                        font-weight: 600;
                                         text-decoration: underline;
                                     }
-                                }
-                            }
-                            >:nth-child(3){
-                                all: unset;
-                                font-family: "Archivo", sans-serif;
-                                cursor: pointer;
-                                background: #3E432E;
-                                padding: 0px 1px;
-                                display: flex;
-                                flex-flow: row wrap;
-                                align-items: center;
-                                justify-content: center;
-                                gap: .45rem;
-                                border-radius: 15px;
-                                box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: .1);
-                                &:hover{
-                                    transform: scale(1.05);
-                                    transition: .4s;
-                                }
-                                >:nth-child(1){
-                                    width: min(25px, 90%);
-                                    img{
-                                        width: 100%;
-                                    }
-                                }
-                                >:nth-child(2){
-                                    color: white;
-                                    font-weight: 600;
                                 }
                             }
                         }
@@ -356,7 +286,7 @@ header{
                             h4{
                                 all: unset;
                                 font-size: 14px;
-                                color: white;
+                                color: #efefe2;
                                 font-weight: 500;
                                 font-family: "Archivo", sans-serif;
                             }
@@ -364,13 +294,13 @@ header{
                         >:nth-child(2){
                             flex: 0;
                             height: 2px;
-                            background: white;
+                            background: #efefe2;
                         }
                     }
                     >:nth-child(2){
                         width: 0%;
                         height: 2px;
-                        background: white;
+                        background: #efefe2;
                     }
                 }
             }
@@ -556,786 +486,3 @@ aside{
 // HEADER RESPONSIVE
 
 // HEADER ---
-
-// Main
-
-main{
-    display: flex;
-    flex-flow: column wrap;
-    padding: 1rem 0rem;
-    .buttonsSelection{
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
-        width: min(1250px, 85%);
-        margin: 0 auto;
-        margin-bottom: 1rem;
-        >:nth-child(1), >:nth-child(2){
-            all: unset;
-            cursor: pointer;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 7.5px;
-            p{
-                all: unset;
-                color: black;
-                font-size: 15px;
-            }
-            .imagePrevNext{
-                width: min(55px, 100%);
-                transform: translateY(-15%);
-                svg{
-                    width: 100%;
-                }
-            }
-        }
-    }
-    .carousel{
-        width: min(1250px, 85%);
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        place-content: center;
-        overflow: hidden;
-        margin-bottom: 1rem;
-        .carousel-item{
-            .container{
-                display: flex;
-                flex-flow: row wrap;
-                place-content: center;
-                align-items: center;
-                gap: 1.5rem;
-                padding-bottom: 1rem;
-
-                .uno{
-                    width: 50%;
-                    width: min(350px, 95%);
-                    box-shadow: 2px 2px 2px gray;
-                    img{
-                        width: 100%;
-                    }
-                }
-                .dos{
-                    width: 50%;
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    gap: 1rem;
-                    >:nth-child(1){
-                        h3{
-                            all: unset;
-                            font-family: 'Judson', serif;
-                            font-size: 25px;
-                        }
-                    }
-                    >:nth-child(2){
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-                        gap: 1rem;
-                        >div{
-                            width: min(110px, 95%);
-                            box-shadow: 2px 2px 2px gray;
-                            img{
-                                width: 100%;
-                            }
-                        }
-                    }
-                    >:nth-child(3){
-                        display: flex;
-                        flex-flow: column wrap;
-                        gap: 5px;
-                        h2{
-                            all: unset;
-                            font-family: 'Judson', serif;
-                            font-weight: 800;
-                            font-size: 33px;
-                        }
-                        h5{
-                            font-family: 'Nunito Sans', sans-serif;
-                            font-size: 18px;
-                            font-weight: 600;
-                        }
-                    }
-                    >:nth-child(4){
-                        display: flex;
-                        flex-flow: column wrap;
-                        gap: .25rem;
-                        p{
-                            all: unset;
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .whatsAppCallActions{
-        display: flex;
-        place-content: center;
-        align-items: center;
-        a{
-            all: unset;
-            cursor: pointer;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            background: #40C351;
-            border-radius: 20px;
-            padding: .25rem .5rem;
-            gap: .5rem;
-            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
-            &:hover{
-                transform: scale(1.05);
-                transition: .5s;
-            }
-            >:nth-child(1){
-                width: min(40px, 100%);
-                img{
-                    width: 100%;
-                }
-            }
-            p{
-                all: unset;
-                color: white;
-                font-weight: 600;
-                font-size: 18px;
-            }
-        }
-    }
-}
-
-@media(max-width: 990px){
-    main{
-        .buttonsSelection{
-            width: min(1250px, 90%);
-            >:nth-child(1), >:nth-child(2){
-                all: unset;
-                cursor: pointer;
-                display: flex;
-                flex-flow: row wrap;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 7.5px;
-                p{
-                    all: unset;
-                    color: black;
-                    font-size: 15px;
-                }
-                .imagePrevNext{
-                    width: min(40px, 100%);
-                }
-            }
-        }
-        .carousel{
-            width: min(1250px, 95%);
-            margin: 0 auto;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            place-content: center;
-            overflow: hidden;
-            margin-bottom: 1rem;
-            .carousel-item{
-                .container{
-                    display: flex;
-                    flex-flow: row wrap;
-                    place-content: center;
-                    align-items: center;
-                    gap: 1.5rem;
-                    .uno{
-                        width: 85%;
-                        width: min(250px, 95%);
-                    }
-                    .dos{
-                        width: 100%;
-                        display: flex;
-                        flex-flow: column wrap;
-                        justify-content: space-between;
-                        gap: 1rem;
-                        >:nth-child(1){
-                            text-align: center;
-                            h3{
-                                all: unset;
-                                font-family: 'Judson', serif;
-                                font-size: 20px;
-                            }
-                        }
-                        >:nth-child(2){
-                            display: flex;
-                            flex-flow: row wrap;
-                            align-items: center;
-                            gap: 1rem;
-                            justify-content: center;
-                            transform: translateX(0%);
-                            >div{
-                                width: min(100px, 95%);
-                            }
-                        }
-                        >:nth-child(3){
-                            display: flex;
-                            flex-flow: column wrap;
-                            gap: 5px;
-                            h2{
-                                all: unset;
-                                font-family: 'Judson', serif;
-                                font-weight: 800;
-                                font-size: 26px;
-                            }
-                            h5{
-                                font-family: 'Nunito Sans', sans-serif;
-                                font-size: 17px;
-                                font-weight: 600;
-                            }
-                        }
-                        >:nth-child(4){
-                            display: flex;
-                            flex-flow: column wrap;
-                            gap: .25rem;
-                            p{
-                                all: unset;
-                                font-size: 16px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.carrusel2{
-    width: min(1250px, 85%);
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column wrap;
-    padding: 1rem 0rem;
-    align-items: center;
-    place-content: center;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    .buttonsSelection{
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
-        width: min(1250px, 100%);
-        margin: 0 auto;
-        margin-bottom: 1rem;
-        >:nth-child(1), >:nth-child(2){
-            all: unset;
-            cursor: pointer;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 7.5px;
-            p{
-                all: unset;
-                color: black;
-                font-size: 15px;
-            }
-            .imagePrevNext{
-                width: min(55px, 100%);
-                transform: translateY(-15%);
-                svg{
-                    width: 100%;
-                }
-            }
-        }
-    }
-    .carousel{
-        width: min(1250px, 85%);
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        place-content: center;
-        overflow: hidden;
-        margin-bottom: 1rem;
-        .carousel-item{
-            .container{
-                display: flex;
-                flex-flow: row wrap;
-                place-content: center;
-                align-items: center;
-                gap: 1.5rem;
-                padding-bottom: 1rem;
-                .uno{
-                    width: 50%;
-                    width: min(350px, 95%);
-                    img{
-                        width: 100%;
-                        box-shadow: 2px 2px 2px gray;
-                    }
-                }
-                .dos{
-                    width: 50%;
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    gap: 1rem;
-                    >:nth-child(1){
-                        h3{
-                            all: unset;
-                            font-family: 'Judson', serif;
-                            font-size: 25px;
-                        }
-                    }
-                    >:nth-child(2){
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-                        gap: 1rem;
-                        >div{
-                            width: min(110px, 95%);
-                            box-shadow: 2px 2px 2px gray;
-                            img{
-                                width: 100%;
-                            }
-                        }
-                    }
-                    >:nth-child(3){
-                        display: flex;
-                        flex-flow: column wrap;
-                        gap: 5px;
-                        h2{
-                            all: unset;
-                            font-family: 'Judson', serif;
-                            font-weight: 800;
-                            font-size: 33px;
-                        }
-                        h5{
-                            font-family: 'Nunito Sans', sans-serif;
-                            font-size: 18px;
-                            font-weight: 600;
-                        }
-                    }
-                    >:nth-child(4){
-                        display: flex;
-                        flex-flow: column wrap;
-                        gap: .25rem;
-                        p{
-                            all: unset;
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .whatsAppCallActions{
-        display: flex;
-        place-content: center;
-        align-items: center;
-        a{
-            all: unset;
-            cursor: pointer;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            background: #40C351;
-            border-radius: 20px;
-            padding: .25rem .5rem;
-            gap: .5rem;
-            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
-            &:hover{
-                transform: scale(1.05);
-                transition: .5s;
-            }
-            >:nth-child(1){
-                width: min(40px, 100%);
-                img{
-                    width: 100%;
-                }
-            }
-            p{
-                all: unset;
-                color: white;
-                font-weight: 600;
-                font-size: 18px;
-            }
-        }
-    }
-}
-
-@media(max-width: 990px){
-    .carrusel2{
-        .buttonsSelection{
-            width: min(1250px, 90%);
-            >:nth-child(1), >:nth-child(2){
-                all: unset;
-                cursor: pointer;
-                display: flex;
-                flex-flow: row wrap;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 7.5px;
-                p{
-                    all: unset;
-                    color: black;
-                    font-size: 15px;
-                }
-                .imagePrevNext{
-                    width: min(40px, 100%);
-                }
-            }
-        }
-        .carousel{
-            width: min(1250px, 95%);
-            margin: 0 auto;
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            place-content: center;
-            overflow: hidden;
-            margin-bottom: 1rem;
-            .carousel-item{
-                .container{
-                    display: flex;
-                    flex-flow: row wrap;
-                    place-content: center;
-                    align-items: center;
-                    gap: 1.5rem;
-                    .uno{
-                        width: 85%;
-                        width: min(250px, 95%);
-                    }
-                    .dos{
-                        width: 100%;
-                        display: flex;
-                        flex-flow: column wrap;
-                        justify-content: space-between;
-                        gap: 1rem;
-                        >:nth-child(1){
-                            text-align: center;
-                            h3{
-                                all: unset;
-                                font-family: 'Judson', serif;
-                                font-size: 20px;
-                            }
-                        }
-                        >:nth-child(2){
-                            display: flex;
-                            flex-flow: row wrap;
-                            align-items: center;
-                            gap: 1rem;
-                            justify-content: center;
-                            transform: translateX(0%);
-                            >div{
-                                width: min(100px, 95%);
-                            }
-                        }
-                        >:nth-child(3){
-                            display: flex;
-                            flex-flow: column wrap;
-                            gap: 5px;
-                            h2{
-                                all: unset;
-                                font-family: 'Judson', serif;
-                                font-weight: 800;
-                                font-size: 26px;
-                            }
-                            h5{
-                                font-family: 'Nunito Sans', sans-serif;
-                                font-size: 17px;
-                                font-weight: 600;
-                            }
-                        }
-                        >:nth-child(4){
-                            display: flex;
-                            flex-flow: column wrap;
-                            gap: .25rem;
-                            p{
-                                all: unset;
-                                font-size: 16px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Main ---
-
-// FOOTER
-
-footer{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    place-content: center;
-    padding: 50px 0px;
-    background: #3E432E;
-    font-family: "Archivo", sans-serif;
-    >:nth-child(1){
-        width: min(1250px, 85%);
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-between;
-        >:nth-child(1){
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 6.5rem;
-            >:nth-child(1){
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: space-between;
-                height: 100%;
-                gap: 3.85rem;
-                >:nth-child(1){
-                    width: 100%;
-                    max-width: 10rem;
-                    img{
-                        width: 100%;
-                    }
-                }
-                >:nth-child(2){
-                    display: flex;
-                    flex-flow: row wrap;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: .95rem;
-                    svg{
-                        fill: white;
-                        cursor: pointer;
-                        transition: .1s;
-                        &:hover{
-                            transform: scale(1.05);
-                        }
-                    }
-                }
-            }
-            >:nth-child(2){
-                display: flex;
-                flex-flow: column wrap;
-                gap: .5rem;
-                a{
-                    all: unset;
-                    transition: .3s;
-                    font-size: 15.5px;
-                    font-weight: 500;
-                    color: white;
-                    display: flex;
-                    flex-flow: row;
-                    align-items: center;
-                    gap: .5rem;
-                    >:nth-child(1){
-                        width: min(25px, 100%);
-                        cursor: pointer;
-                        &:hover{
-                            transform: scale(1.05);
-                        }
-                        img{
-                            width: 100%;
-                        }
-                    }
-                    p{
-                        cursor: pointer;
-                        &:hover{
-                            text-decoration: underline;
-                            text-underline-offset: .25rem;
-                        }
-                    }
-                }
-            }
-            .specialFixBootstrap{
-                a{
-                    >:nth-child(1){
-                        transform: translateY(-25%);
-                        &:hover{
-                            transform: translateY(-25%) scale(1.05);
-                        }
-                    }
-                }
-            }
-        }
-        >:nth-child(2){
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: space-between;
-            gap: 2rem;
-            >:nth-child(1){
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: flex-end;
-                a{
-                    all: unset;
-                    cursor: pointer;
-                    background: rgb(255, 255, 255);
-                    padding: .5rem .65rem;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: center;
-                    gap: .45rem;
-                    border-radius: 15px;
-                    box-shadow: 0px 0px 5px 2px rgba($color: #000000, $alpha: .1);
-                    transition: .5s;
-                    &:hover{
-                        transform: scale(1.05); /* Slightly scale up */
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-                        transition: .5s;
-                    }
-                    >:nth-child(1){
-                        width: min(25px, 90%);
-                        svg{
-                            width: 100%;
-                            fill: #3E432E;
-                        }
-                    }
-                    >:nth-child(2){
-                        p{
-                            all: unset;
-                            font-weight: 500;
-                            font-size: 16px;
-                            color: #3E432E;
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-            >:nth-child(2){
-                p{
-                    all: unset;
-                    font-size: 15.5px;
-                    color: white;
-                    cursor: default;
-                }
-                p::selection{
-                    background: none;
-                }
-            }
-        }
-    }
-}
-
-// FOOTER---
-
-// FOOTER MEDIAS(1050px) TABLET / PHONE ---
-
-@media(max-width:1050px){
-    footer{
-        width: 100%;
-        padding: 20px 0px;
-        >:nth-child(1){
-            width: 95%;
-            flex-flow: column wrap;
-            align-items: center;
-            gap: 1rem;
-            >:nth-child(1){
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: center;
-                justify-content: center;
-                gap: 2.5rem;
-                >:nth-child(1){
-                    display: flex;
-                    flex-flow: column wrap;
-                    justify-content: space-between;
-                    gap: 1.5rem;
-                    >:nth-child(1){
-                        max-width: 7.5rem;
-                    }
-                    >:nth-child(2){
-                        display: flex;
-                        flex-flow: row wrap;
-                        align-items: center;
-                        justify-content: space-between;
-                        gap: .95rem;
-                    }
-                }
-                >:nth-child(2){
-                    gap: 0rem;
-                }
-            }
-            >:nth-child(2){
-                gap: 1.5rem;
-                align-items: center;
-                >:nth-child(1){
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: flex-end;
-                }
-            }
-        }
-    }
-}
-
-// FOOTER MEDIAS(1050px) TABLET / PHONE --- ---
-
-// WhatsApp screen 
-     
-.whatsappScreenPositionInternal{
-    position: fixed;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    right: 0;
-    bottom: 0%;
-    display: flex;
-    justify-content: flex-end;
-    flex-flow: column wrap;
-    gap: .5rem;
-    z-index: 2000;
-    .whatsappCallAction{
-        width: 95%;
-        margin: 0 auto;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        >:nth-child(1){
-            width: min(50px, 100%);
-            &:hover{
-                transform: scale(1.05);
-            }
-            img{
-                width: 100%;
-                cursor: pointer;
-            }
-        }
-    }
-}
-
-// WhatsApp screen ---
-
-.tabs {
-    display: flex;    
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0rem;
-    .tab-button {
-        all: unset;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 20px;
-        color: #000000;
-        &:hover{
-            text-decoration: underline .12rem solid black;
-        text-underline-offset: .15rem;
-        }
-    }
-    .tab-button.active {
-        text-decoration: underline .12rem solid black;
-        text-underline-offset: .15rem;
-    }
-}
-
-.tab-pane {
-    display: none;
-}
-
-.tab-pane.active {
-    display: block;
-}
