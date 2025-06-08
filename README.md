@@ -16,8 +16,6 @@
 <h4>Apps:</h4>
 <img src="https://skillicons.dev/icons?i=figma" />
 
-<h1>(Título)</h1>
-
 <p>Bienvenido a WONDERFUL STORIES —  frontend project, diseñado por Pablo Nieto (GitHub: <a href="https://github.com/pabloWIB">pabloWIB</a>)</p>
 
 <a href="https://www.linkedin.com/in/pablo-nieto-perez-39a530292/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Pablo Nieto"/></a>
