@@ -1,0 +1,186 @@
+/* =============================================================
+   layout.css — cover grid, panels and their vertical rhythm
+   Mobile first. Breakpoints: 480 / 768 / 1024 / 1440.
+   ============================================================= */
+
+/* ---------- Cover -------------------------------------------- */
+
+/* Stacked on small screens, two full-height panels side by side
+   from 1024px up. */
+.cover {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Panel shell -------------------------------------- */
+
+/* align-items: stretch keeps .panel__inner the full height of the
+   panel, which is what lets its space-between spread the blocks from
+   the top edge to the bottom edge.
+
+   The panel deliberately does not clip: on a short viewport it grows
+   past 100vh and the page scrolls, instead of cutting the last block
+   off. Only the photograph is clipped, inside .panel__bg. */
+.panel {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-6) var(--space-4);
+}
+
+.panel__inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--panel-max);
+}
+
+/* Single-block panel: content sits in the middle instead of being
+   spread across the full height. Used by 404.html. */
+.panel__inner--center {
+  justify-content: center;
+}
+
+/* ---------- Masthead panel ----------------------------------- */
+
+.panel--masthead {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.masthead__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.masthead__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+
+/* ---------- Feature panel ------------------------------------ */
+
+.panel--feature {
+  color: var(--color-paper);
+}
+
+/* Photograph and scrim sit behind the content of the panel.
+   This element is the clipping frame: the photograph inside it starts
+   zoomed in and settles back, and overflow keeps that inside the panel. */
+.panel__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--color-ink);
+}
+
+.panel__bg::before {
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/content/landscape-mountains.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+/* Flat scrim that buys the cream type its contrast over the sky. */
+.panel__bg::after {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-scrim);
+  content: "";
+}
+
+.panel--feature .panel__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.feature__meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.feature__spread {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.feature__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.feature__footer-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ---------- Centred blocks ----------------------------------- */
+
+.masthead__collective,
+.masthead__byline,
+.feature__title {
+  width: 100%;
+  text-align: center;
+}
+
+.masthead__lede {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ---------- Breakpoints -------------------------------------- */
+
+@media (min-width: 480px) {
+  .panel {
+    padding: var(--space-6) var(--space-5);
+  }
+}
+
+@media (min-width: 768px) {
+  .panel {
+    padding: var(--space-7) var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cover {
+    flex-direction: row;
+  }
+
+  /* Side by side the panels are only as tall as the window, so the
+     vertical padding steps down to keep a 768px-tall laptop from
+     scrolling for the sake of a few pixels. */
+  .panel {
+    flex: 1 1 50%;
+    padding: var(--space-5);
+  }
+}
+
+@media (min-width: 1440px) {
+  .panel {
+    padding: var(--space-7) var(--space-7);
+  }
+}

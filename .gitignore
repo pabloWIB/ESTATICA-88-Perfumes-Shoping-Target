@@ -1,0 +1,24 @@
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+
+# Tooling installed only to serve or optimise the site locally
+node_modules/
+.cache/
+
+# Hosting
+.vercel

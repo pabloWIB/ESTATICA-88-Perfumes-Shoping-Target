@@ -1,0 +1,145 @@
+/* =============================================================
+   base.css — design tokens, reset and typography
+   Load order: base.css -> layout.css -> components.css
+   ============================================================= */
+
+/* ---------- Design tokens ------------------------------------ */
+
+:root {
+  /* Palette, derived from the two colours the cover already used:
+     the paper cream of the left panel and the black of its type. */
+  --color-paper: #efefe2;
+  --color-ink: #000000;
+
+  /* Flat scrim laid over the landscape photograph so that cream
+     type keeps a 4.5:1 contrast ratio against the sky. */
+  --color-scrim: rgba(0, 0, 0, 0.46);
+
+  /* Spacing scale: 4 / 8 / 16 / 24 / 32 / 48 / 64 / 96 */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+
+  /* Typography: two families only */
+  --font-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+
+  --fs-100: 0.8125rem;
+  --fs-200: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1.0625rem;
+  --fs-display: clamp(2.75rem, 7vw, 4.0625rem);
+
+  --lh-tight: 1.15;
+  --lh-body: 1.45;
+
+  /* Shape */
+  --radius-pill: 999px;
+  --rule-thick: 2px;
+  --rule-heavy: 5px;
+  --dot-size: 12px;
+
+  /* Motion */
+  --transition-ui: 180ms ease;
+  --reveal-duration: 1.2s;
+  --reveal-step: 220ms;
+
+  /* Measure and widths */
+  --panel-max: 46rem;
+  --measure: 64ch;
+  --tap-target: 44px;
+}
+
+/* ---------- Reset -------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--fs-300);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: var(--rule-thick) solid currentColor;
+  outline-offset: var(--space-1);
+}
+
+/* ---------- Typography --------------------------------------- */
+
+h1,
+h2 {
+  font-weight: 500;
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Underlined stress emphasis. Editorial mark, not a link:
+   no pointer cursor and no hover state. */
+em {
+  font-style: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+/* ---------- Reduced motion ----------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}

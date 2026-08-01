@@ -1,0 +1,237 @@
+/* =============================================================
+   components.css — editorial marks, card, rules, motion
+   ============================================================= */
+
+/* ---------- Tags and labels ---------------------------------- */
+
+.tag {
+  font-family: var(--font-sans);
+  font-size: var(--fs-300);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tag--sm {
+  font-size: var(--fs-200);
+}
+
+/* Outlined pill carrying the edition year. */
+.tag--pill {
+  padding: 0 var(--space-2);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-pill);
+}
+
+/* ---------- Masthead ----------------------------------------- */
+
+.masthead__collective {
+  font-size: var(--fs-400);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.masthead__byline h1 {
+  font-weight: 400;
+}
+
+.masthead__byline-role {
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  font-style: italic;
+  line-height: var(--lh-tight);
+}
+
+.masthead__lede {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--fs-200);
+  text-transform: uppercase;
+}
+
+/* ---------- Feature panel ------------------------------------ */
+
+/* Decorative dot that opens the feature panel. */
+.mark-dot {
+  flex: none;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background-color: var(--color-paper);
+}
+
+/* Static contents index. These are labels, not links: no href,
+   no pointer cursor and no hover state, so nothing invites a click. */
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+  text-align: right;
+}
+
+/* ---------- Card --------------------------------------------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-5) var(--space-4);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.card__portrait {
+  width: min(110px, 100%);
+  height: auto;
+  border-radius: 50%;
+}
+
+.card__text {
+  max-width: 42ch;
+  font-size: var(--fs-200);
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ---------- Rules -------------------------------------------- */
+
+/* Horizontal keyline. Draws itself from the left on load. */
+.rule {
+  display: block;
+  width: 100%;
+  height: var(--rule-thick);
+  background-color: currentColor;
+  transform-origin: left center;
+}
+
+.rule--heavy {
+  height: var(--rule-heavy);
+}
+
+.rule--flex {
+  flex: 1;
+  width: auto;
+}
+
+/* ---------- Not found page ----------------------------------- */
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.notfound__code {
+  font-family: var(--font-serif);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+}
+
+.notfound__text {
+  max-width: var(--measure);
+  margin-inline: auto;
+  font-size: var(--fs-200);
+  text-transform: uppercase;
+}
+
+.link-home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap-target);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-300);
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color var(--transition-ui), color var(--transition-ui);
+}
+
+.link-home:hover,
+.link-home:focus-visible {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.link-home:active {
+  background-color: #333333;
+  color: var(--color-paper);
+}
+
+/* ---------- Motion ------------------------------------------- */
+
+/* Staged entrance. Runs on CSS alone, so the page still reads
+   if JavaScript never arrives. */
+.reveal {
+  animation: reveal var(--reveal-duration) ease-out both;
+  animation-delay: calc(var(--reveal-index, 0) * var(--reveal-step));
+}
+
+.reveal--1 { --reveal-index: 1; }
+.reveal--2 { --reveal-index: 2; }
+.reveal--3 { --reveal-index: 3; }
+.reveal--4 { --reveal-index: 4; }
+.reveal--5 { --reveal-index: 5; }
+.reveal--6 { --reveal-index: 6; }
+.reveal--7 { --reveal-index: 7; }
+.reveal--8 { --reveal-index: 8; }
+.reveal--9 { --reveal-index: 9; }
+
+.reveal .rule {
+  animation: rule-draw 1s ease-out both;
+  animation-delay: calc((var(--reveal-index, 0) + 1) * var(--reveal-step));
+}
+
+.panel__bg::before {
+  animation: settle 2.4s ease-out both;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes settle {
+  from {
+    transform: scale(1.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ---------- Breakpoints -------------------------------------- */
+
+@media (min-width: 768px) {
+  .card {
+    padding: var(--space-5) var(--space-5);
+  }
+
+  .card__text {
+    font-size: var(--fs-300);
+  }
+}
