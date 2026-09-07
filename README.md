@@ -4,7 +4,7 @@
 
 A single-page editorial cover: two full-height panels, one typographic and one photographic, with a staged entrance animation.
 
-[![Live site](https://img.shields.io/badge/live-wonderfulstories.wib.digital-2ea44f)](https://wonderfulstories.wib.digital)
+[![Live site](https://img.shields.io/badge/live-pablowib.github.io/Wonderful-Stories-Web-2ea44f)](https://pablowib.github.io/Wonderful-Stories-Web)
 [![Hire me on Fiverr](https://img.shields.io/badge/Hire%20me%20on-Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white)](https://www.fiverr.com/pablonietop)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ![Build step](https://img.shields.io/badge/build%20step-none-lightgrey)
@@ -84,7 +84,7 @@ Then visit `http://localhost:3000`.
 
 Static hosting, no build command and no output directory: publish the repository root as-is. `404.html` at the root is picked up automatically by Vercel, Netlify and GitHub Pages.
 
-Currently deployed on Vercel at [wonderfulstories.wib.digital](https://wonderfulstories.wib.digital).
+Currently deployed on GitHub Pages at [pablowib.github.io/Wonderful-Stories-Web](https://pablowib.github.io/Wonderful-Stories-Web).
 
 Both `sitemap.xml` and the canonical, `og:url` and `og:image` tags in `index.html` carry that absolute domain. Deploying to a different domain means updating those four values.
 
